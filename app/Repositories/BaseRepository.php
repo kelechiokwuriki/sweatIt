@@ -23,7 +23,12 @@ abstract class BaseRepository {
 
     public function find(int $id)
     {
-        return $this->model->find();
+        return $this->model->find($id);
+    }
+
+    public function where($column, $value) 
+    {
+        return $this->model->where($column, $value)->get();
     }
 
     public function create(array $data)  
