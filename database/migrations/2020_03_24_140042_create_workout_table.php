@@ -18,7 +18,7 @@ class CreateWorkoutTable extends Migration
             $table->string('exercise');
             $table->integer('reps');
             $table->integer('sets');
-            $table->string('rest_time');
+            $table->string('rest_time'); //rest time
             $table->timestamps();
         });
     }
