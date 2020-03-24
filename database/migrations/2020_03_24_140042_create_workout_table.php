@@ -13,11 +13,11 @@ class CreateWorkoutTable extends Migration
      */
     public function up()
     {
-        Schema::create('workout', function (Blueprint $table) {
+        Schema::create('workouts', function (Blueprint $table) {
             $table->id();
             $table->string('exercise');
-            $table->string('reps');
-            $table->string('sets');
+            $table->integer('reps');
+            $table->integer('sets');
             $table->string('rest_time');
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreateWorkoutTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workout');
+        Schema::dropIfExists('workouts');
     }
 }
